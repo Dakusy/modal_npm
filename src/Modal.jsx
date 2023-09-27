@@ -1,12 +1,6 @@
-## Installation
-> npm i @dakusy/modal_npm
+import React from "react";
+import '../src/Modal.css';
 
-## Dependency
-> npm install to get all the dependency
-
-
-## Modal npm component 
-```js
 function Modal({ closeModal }) {
     return (
         // class allowing to show the modal or to not show it.
@@ -23,4 +17,3 @@ function Modal({ closeModal }) {
 }
 
 export default Modal;
-```

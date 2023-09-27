@@ -1,24 +1,13 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Modal from './Modal';
 
 function App() {
+  //Allow us to initiate the state of the modal to true (already open).
+  const [openModal, setOpenModal] = useState(true)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    //Simply allow us to send an information to the modal component to change the state when we close it.
+    openModal && <Modal closeModal={setOpenModal} />
   );
 }
 
